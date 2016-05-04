@@ -1,8 +1,8 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'Checkbox',
 
 	propTypes:{
@@ -17,10 +17,10 @@ module.exports = React.createClass({
 
 	render: function(){
 
-		var checkbox = this.transferPropsTo(
-			<input type="checkbox" className='topcoat-checkbox__checkmark' />
+		var checkbox = (
+			<input {...this.props} type="checkbox" className='topcoat-checkbox__checkmark' />
 		);
-		
+
 		return (
 			<label className="topcoat-checkbox">
   			{checkbox}

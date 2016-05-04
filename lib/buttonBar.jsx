@@ -1,9 +1,9 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 var ClassSet = require('./classSet');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'ButtonBar',
 
 	propTypes:{
@@ -15,7 +15,7 @@ module.exports = React.createClass({
 			full: false
 		};
 	},
-	
+
 	render: function(){
 
 		var classSet = ClassSet({
@@ -23,8 +23,8 @@ module.exports = React.createClass({
 			'full': this.props.full
 		});
 
-		return this.transferPropsTo(
-			<div className={classSet}>
+		return (
+			<div className={classSet} {...this.props}>
 			{this.props.children}
 			</div>
 		);

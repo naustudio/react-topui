@@ -1,9 +1,9 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 var ClassSet = require('./classSet');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'TabBarItem',
 
 	propTypes:{
@@ -23,7 +23,7 @@ module.exports = React.createClass({
 			'full': this.props.full
 		});
 
-		var button = this.transferPropsTo(<button className={classSet}>{this.props.children}</button>); 
+		var button = (<button className={classSet} {...this.props}>{this.props.children}</button>);
 		return (
 			<label className="topcoat-tab-bar__item">
     			<input type="radio" name={this.props.name} />
@@ -31,5 +31,5 @@ module.exports = React.createClass({
   			</label>
 		);
 	}
-	
+
 });

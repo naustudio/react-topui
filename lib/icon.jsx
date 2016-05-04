@@ -1,8 +1,8 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'Icon',
 
 	propTypes:{
@@ -10,8 +10,8 @@ module.exports = React.createClass({
 	},
 
 	render: function(){
-		return this.transferPropsTo( 
-			<span className='icomatic icon'>
+		return (
+			<span className='icomatic icon' {...this.props}>
 				{this.props.name}
 			</span>
 		);

@@ -1,8 +1,8 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'NavBarTitle',
 
 	propTypes:{
@@ -17,8 +17,8 @@ module.exports = React.createClass({
 
 	render: function(){
 		var title = this.props.title || this.props.children;
-		return this.transferPropsTo(
-      <h1 className="topcoat-navigation-bar__title" style={{textAlign: 'center'}}>
+		return (
+      <h1 className="topcoat-navigation-bar__title" style={{textAlign: 'center'}} {...this.props}>
         {title}
       </h1>
 		);

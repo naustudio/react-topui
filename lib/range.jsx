@@ -1,9 +1,9 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 var ClassSet = require('./classSet');
 
 module.exports = React.createClass({
-		
+
 	displayName: 'Range',
 
 	render: function(){
@@ -11,10 +11,10 @@ module.exports = React.createClass({
 		var classSet = ClassSet({
 			'topcoat-range': true
 		});
-		
-		return this.transferPropsTo(
-			<input type="range" className={classSet} />
+
+		return (
+			<input type="range" className={classSet} {...this.props} />
 		);
 	}
-	
+
 });

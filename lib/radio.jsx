@@ -1,8 +1,8 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'Radio',
 
 	propTypes:{
@@ -28,8 +28,8 @@ module.exports = React.createClass({
 			left = this.props.label + ' ';
 		}
 
-		var input = this.transferPropsTo(
-			<input type="radio" />
+		var input = (
+			<input type="radio" {...this.props} />
 		);
 
 		return (

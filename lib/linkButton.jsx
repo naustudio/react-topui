@@ -1,9 +1,9 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 var Button = require('./button');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'LinkButton',
 
 	nav: function(){
@@ -12,11 +12,11 @@ module.exports = React.createClass({
 	},
 
 	render: function(){
-		return this.transferPropsTo(
-			<Button onClick={this.nav}>
+		return (
+			<Button onClick={this.nav} {...this.props}>
 				{this.props.children}
 			</Button>
 		);
 	}
-	
+
 });

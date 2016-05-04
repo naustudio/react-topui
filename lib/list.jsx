@@ -1,13 +1,13 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'List',
 
 	render: function(){
-		return this.transferPropsTo(
-			<div className='topcoat-list'>
+		return (
+			<div className='topcoat-list' {...this.props}>
 				{this.props.children}
 			</div>
 		);

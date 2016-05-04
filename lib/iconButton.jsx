@@ -1,9 +1,9 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 var ClassSet = require('./classSet');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'IconButton',
 
 	propTypes:{
@@ -19,9 +19,9 @@ module.exports = React.createClass({
 			full: false
 		};
 	},
-	
+
 	render: function(){
-		
+
 		var classSet = ClassSet({
 			'topcoat-button': !this.props.large && !this.props.cta && !this.props.quiet,
 			'topcoat-button--quiet': this.props.quiet && !this.props.large,
@@ -30,9 +30,9 @@ module.exports = React.createClass({
 			'full': this.props.full
 		});
 
-		
-		return this.transferPropsTo(
-			<button className={classSet}>
+
+		return (
+			<button className={classSet} {...this.props}>
 				{this.props.children}
 			</button>
 		);

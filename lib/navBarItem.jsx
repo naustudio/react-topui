@@ -1,9 +1,9 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 var ClassSet = require('./classSet');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'NavBarItem',
 
 	propTypes:{
@@ -35,8 +35,8 @@ module.exports = React.createClass({
 			'center': this.props.center
 		});
 
-		return this.transferPropsTo(
-			<div className={classSet}>
+		return (
+			<div className={classSet} {...this.props}>
 			{this.props.children}
 			</div>
 		);

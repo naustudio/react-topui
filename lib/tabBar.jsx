@@ -1,9 +1,9 @@
-/** @jsx React.DOM */
+/** jsx */
 var React = require('react');
 var ClassSet = require('./classSet');
 
 module.exports = React.createClass({
-	
+
 	displayName: 'TabBar',
 
 	propTypes:{
@@ -17,14 +17,14 @@ module.exports = React.createClass({
 	},
 
 	render: function(){
-		
+
 		var classSet = ClassSet({
 			'topcoat-tab-bar': true,
 			'full': this.props.full
 		});
 
-		return this.transferPropsTo(
-			<div className={classSet}>{this.props.children}</div>
+		return (
+			<div className={classSet} {...this.props}>{this.props.children}</div>
 		);
 	}
 });

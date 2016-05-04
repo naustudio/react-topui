@@ -20,8 +20,14 @@ module.exports = {
     },
     module: {
         loaders: [
-        { test: /\.jsx$/, loader: '../node_modules/jsx-loader' }
-        ]    
+            {
+                test: /\.jsx$/,
+                loader: '../node_modules/babel-loader',
+                query: {
+                    presets: ['es2015', 'react']
+                }
+            }
+        ]
     },
     externals: {
         react: {
